@@ -1,0 +1,42 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.site-wraper {
+  height: 100vh;
+  width: 100%;
+  padding: 2.5rem 4rem;
+  background: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52393.jpg?w=900&t=st=1673698379~exp=1673698979~hmac=69aa3af74b41b335cc98bff6ee86982618597542186894420267b1d8db6f99bf");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.site-wraper .site-head {
+  font-size: 2.5rem;
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-wraper .site-head h1 {
+  font-size: 3rem;
+}
+.site-wraper .site-head a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+.site-wraper .site-head li {
+  list-style: none;
+  display: inline-block;
+  margin: 1em;
+  font-size: 0.65em;
+}/*# sourceMappingURL=site.css.map */
