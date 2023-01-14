@@ -1,4 +1,6 @@
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@ html {
   height: 100vh;
   width: 100%;
   padding: 2.5rem 4rem;
-  background: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52393.jpg?w=900&t=st=1673698379~exp=1673698979~hmac=69aa3af74b41b335cc98bff6ee86982618597542186894420267b1d8db6f99bf");
+  background-color: #04133b;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -27,7 +29,7 @@ html {
   align-items: center;
 }
 .site-wraper .site-head h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .site-wraper .site-head a {
   font-weight: bold;
@@ -38,5 +40,51 @@ html {
   list-style: none;
   display: inline-block;
   margin: 1em;
-  font-size: 0.65em;
+  font-size: 0.9em;
+  transition: color 1s ease-out;
+}
+.site-wraper .site-head li:hover {
+  color: yellow;
+}
+.site-wraper .site-main {
+  margin: 4rem auto;
+  width: 95%;
+  height: 80vh;
+}
+.site-wraper .site-main .home-main-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.site-wraper .site-main img {
+  width: 100%;
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  overflow: hidden;
+}
+.site-wraper .site-main h2 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 4.5rem;
+  line-height: 60px;
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+}
+.site-wraper .site-main p {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 2.5rem;
+  text-align: center;
 }/*# sourceMappingURL=site.css.map */

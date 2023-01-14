@@ -1,12 +1,14 @@
 @import 'variables';
 
-*,::after,::before{
+*,
+::after,
+::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-size: 10px;
     color: $primaryColor;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -16,11 +18,11 @@ html{
     height: 100vh;
     width: 100%;
     padding: 2.5rem 4rem;
-    background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52393.jpg?w=900&t=st=1673698379~exp=1673698979~hmac=69aa3af74b41b335cc98bff6ee86982618597542186894420267b1d8db6f99bf');
+    background-color: #04133b;
     background-repeat: no-repeat;
     background-size: cover;
 
-    .site-head{
+    .site-head {
         font-size: 2.5rem;
         width: 100%;
         margin: 1rem 0;
@@ -28,23 +30,85 @@ html{
         justify-content: space-between;
         align-items: center;
 
-        h1{
-            font-size: 3.0rem;
+        h1 {
+            font-size: 4.0rem;
         }
 
-        a{
+        a {
             font-weight: bold;
             text-decoration: none;
             color: inherit;
         }
 
-        li{
+        li {
             list-style: none;
             display: inline-block;
             margin: 1em;
-            font-size: .65em;
+            font-size: .9em;
+            transition: color 1s ease-out;
+
+            &:hover {
+                color: yellow
+            }
         }
     }
 
-    
-};
+    .site-main {
+        
+        margin: 4rem auto;
+        width: 95%;
+        height: 80vh;
+
+        .home-main-grid {
+            display: grid;
+            gap: 1rem;
+            width: 100%;
+            height: 100%;
+            
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+
+
+
+
+        img {
+            width: 100%;
+
+            height: 100%;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            overflow: hidden;
+        }
+
+
+        h2 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            font-size: 4.5rem;
+            line-height: 60px;
+            letter-spacing: 1.5px;
+            font-weight: bolder
+        }
+
+        p{
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+    }
+
+
+}
+
+;
