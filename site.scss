@@ -57,7 +57,7 @@ html {
         
         margin: 4rem auto;
         width: 95%;
-        height: 80vh;
+        height: 75vh;
 
         .home-main-grid {
             display: grid;
@@ -75,9 +75,9 @@ html {
 
 
         img {
-            width: 100%;
+            width: 110%;
 
-            height: 100%;
+            height: 110%;
             grid-column-start: 1;
             grid-column-end: 4;
             grid-row-start: 1;
@@ -87,6 +87,7 @@ html {
 
 
         h2 {
+            width: 100%;
             grid-column-start: 4;
             grid-column-end: 7;
             grid-row-start: 1;
@@ -94,16 +95,19 @@ html {
             font-size: 4.5rem;
             line-height: 60px;
             letter-spacing: 1.5px;
-            font-weight: bolder
+            font-weight: bolder;
+            align-self: flex-end;
         }
 
         p{
+            width: 100%;
             grid-column-start: 4;
             grid-column-end: 7;
             grid-row-start: 2;
             grid-row-end: 3;
             font-size: 2.5rem;
-            text-align: center;
+            align-self: flex-start;
+            margin-top: 4rem;
         }
 
     }
