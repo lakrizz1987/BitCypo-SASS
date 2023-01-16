@@ -41,15 +41,15 @@ html {
   display: inline-block;
   margin: 1em;
   font-size: 0.9em;
-  transition: color 1s ease-out;
+  transition: color 0.8s ease-out;
 }
 .site-wraper .site-head li:hover {
-  color: yellow;
+  color: #ffc107;
 }
 .site-wraper .site-main {
-  margin: 4rem auto;
+  margin: 8rem auto;
   width: 95%;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
 }
 .site-wraper .site-main .home-main-grid {
@@ -63,8 +63,9 @@ html {
   align-items: center;
 }
 .site-wraper .site-main img {
-  width: 110%;
-  height: 110%;
+  width: 90%;
+  align-self: baseline;
+  height: 80%;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -91,5 +92,25 @@ html {
   grid-row-end: 3;
   font-size: 2.5rem;
   align-self: flex-start;
-  margin-top: 4rem;
+  margin-top: 2rem;
+  overflow-wrap: break-word;
+}
+.site-wraper .site-main .main-grid-buttons {
+  grid-column: 4/7;
+  width: 100%;
+  align-self: flex-start;
+}
+.site-wraper .site-main .main-grid-buttons a {
+  color: inherit;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 1em 1.5em;
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 1em;
+  transition: all 0.8s ease-out;
+}
+.site-wraper .site-main .main-grid-buttons a:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
 }/*# sourceMappingURL=site.css.map */
