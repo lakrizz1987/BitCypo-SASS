@@ -49,11 +49,12 @@ html {
 .site-wraper .site-main {
   margin: 4rem auto;
   width: 95%;
-  height: 75vh;
+  height: 70vh;
+  overflow: hidden;
 }
 .site-wraper .site-main .home-main-grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(6, 1fr);
