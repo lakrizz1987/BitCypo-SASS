@@ -17,6 +17,13 @@ body {
   background-color: #091334;
 }
 
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.8s ease-out;
+}
+
 .site-wraper {
   width: 100%;
   padding: 2.5rem 4rem 0 4rem;
@@ -32,19 +39,13 @@ body {
 .site-wraper .site-head h1 {
   font-size: 4rem;
 }
-.site-wraper .site-head a {
-  font-weight: bold;
-  text-decoration: none;
-  color: inherit;
-}
 .site-wraper .site-head li {
   list-style: none;
   display: inline-block;
   margin: 1em;
   font-size: 0.9em;
-  transition: color 0.8s ease-out;
 }
-.site-wraper .site-head li:is(:hover) {
+.site-wraper .site-head li > a:is(:hover, :focus) {
   color: #ffc107;
 }
 .site-wraper .site-main {
@@ -101,8 +102,6 @@ body {
   align-self: flex-start;
 }
 .site-wraper .site-main .main-grid-buttons a {
-  color: inherit;
-  text-decoration: none;
   border: 2px solid white;
   padding: 1em 1.5em;
   font-size: 2em;
@@ -110,7 +109,7 @@ body {
   margin-right: 1em;
   transition: all 0.8s ease-out;
 }
-.site-wraper .site-main .main-grid-buttons a:hover {
+.site-wraper .site-main .main-grid-buttons a:is(:hover, :focus) {
   background-color: #ffc107;
   border-color: #ffc107;
 }
