@@ -13,6 +13,10 @@ html {
     font-size: 10px;
     color: $primaryColor;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    @include respond-to('small') {
+        font-size: 9px;
+    }
 }
 
 body {
@@ -20,7 +24,8 @@ body {
     background-color: $backgroundColor;
 }
 
-a,i {
+a,
+i {
     font-weight: bold;
     text-decoration: none;
     color: inherit;
@@ -33,6 +38,9 @@ a,i {
     width: 100%;
     padding: 2.5rem 4rem 0 4rem;
 
+    @include respond-to('small') {
+        padding: 2.5rem 2rem 2.5rem 2rem;
+    }
 
     .site-head {
         font-size: 2.5rem;
@@ -82,6 +90,9 @@ a,i {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
+                margin-bottom: 3rem;
+                gap: 5rem;
             }
         }
 
@@ -96,6 +107,10 @@ a,i {
             grid-row-start: 1;
             grid-row-end: 4;
             overflow: hidden;
+
+            @include respond-to('small') {
+                width: 100%;
+            }
         }
 
 
@@ -110,7 +125,6 @@ a,i {
             letter-spacing: 1.5px;
             font-weight: bolder;
             align-self: flex-end;
-
         }
 
         p {
@@ -131,6 +145,13 @@ a,i {
             width: 100%;
             align-self: flex-start;
 
+            @include respond-to('small') {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+
             a {
                 border: 2px solid $primaryColor;
                 padding: 1em 1.5em;
@@ -139,7 +160,12 @@ a,i {
                 margin-right: 1em;
                 transition: all 0.8s ease-out;
 
-                &:is(:hover, :focus) {
+                @include respond-to('small') {
+                    margin-right: 0;
+                    padding: 0.9em 1.2em;
+                }
+
+                &:is(:hover) {
                     background-color: $yellowColor;
                     border-color: $yellowColor;
                 }
@@ -155,20 +181,24 @@ a,i {
         justify-content: space-between;
         border-top: 1px solid $primaryColor;
 
-        ul{
+        @include respond-to('small') {
+            flex-direction: column-reverse;
+        }
+
+        ul {
             text-align: center;
-            
-            li{
-               
+
+            li {
+
                 display: inline-block;
                 margin: 2rem 0.5rem;
 
-                a{
-                    &:is(:hover,:focus){
+                a {
+                    &:is(:hover) {
                         color: $yellowColor;
                     }
 
-                    i{
+                    i {
                         font-size: 3rem;
                     }
                 }
