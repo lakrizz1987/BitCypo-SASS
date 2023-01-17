@@ -218,7 +218,7 @@ i {
 };
 
 #hamburger{
-    display: none;
+   display: none;
 }
 
 label{
@@ -228,6 +228,7 @@ label{
         content: "\2630";
         font-weight: 500;
         font-size: 6rem;
+        
     }
     
     @include respond-to('small'){
