@@ -37,8 +37,12 @@ i {
 .site-wraper {
     width: 100%;
     padding: 2.5rem 4rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     @include respond-to('small') {
+        display: block;
         padding: 2.5rem 2rem 2.5rem 2rem;
     }
 
@@ -54,6 +58,11 @@ i {
             font-size: 4.0rem;
         }
 
+        nav{
+            @include respond-to('small'){
+                display: none;
+            }
+        }
 
         li {
             list-style: none;
@@ -77,6 +86,7 @@ i {
 
 
         .home-main-grid {
+            min-height: 70vh;
             display: grid;
             gap: 2rem;
             width: 100%;
@@ -205,6 +215,24 @@ i {
             }
         }
     }
+};
+
+#hamburger{
+    display: none;
 }
 
-;
+label{
+    display: none;
+    
+    &::before{
+        content: "\2630";
+        font-weight: 500;
+        font-size: 6rem;
+    }
+    
+    @include respond-to('small'){
+        display: block;
+        padding-bottom: 1rem;
+    }
+}
+
