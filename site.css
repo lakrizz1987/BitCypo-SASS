@@ -63,6 +63,14 @@ a {
   justify-items: stretch;
   align-items: center;
 }
+@media (max-width: 1010px) {
+  .site-wraper .site-main .home-main-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .site-wraper .site-main img {
   width: 90%;
   align-self: baseline;
