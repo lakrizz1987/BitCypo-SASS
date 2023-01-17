@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  position: relative;
   height: 100vh;
   background-color: #091334;
 }
@@ -56,7 +57,7 @@ i {
   font-size: 4rem;
 }
 @media (max-width: 1010px) {
-  .site-wraper .site-head nav {
+  .site-wraper .site-head .site-nav {
     display: none;
   }
 }
@@ -191,7 +192,16 @@ i {
   font-size: 3rem;
 }
 
-#hamburger {
+.hamburger-menu {
+  display: none;
+}
+@media (max-width: 1010px) {
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+#opt-in {
   display: none;
 }
 
@@ -206,6 +216,13 @@ label::before {
 @media (max-width: 1010px) {
   label {
     display: block;
+    position: absolute;
+    right: 50px;
+    top: 12px;
     padding-bottom: 1rem;
   }
+}
+
+input:checked ~ .site-wraper .site-head .site-nav {
+  display: block;
 }/*# sourceMappingURL=site.css.map */

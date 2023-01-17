@@ -20,6 +20,7 @@ html {
 }
 
 body {
+    position: relative;
     height: 100vh;
     background-color: $backgroundColor;
 }
@@ -58,11 +59,12 @@ i {
             font-size: 4.0rem;
         }
 
-        nav{
-            @include respond-to('small'){
-                display: none;
-            }
+       .site-nav{
+        @include respond-to('small') {
+            display: none;
         }
+
+       }
 
         li {
             list-style: none;
@@ -215,25 +217,44 @@ i {
             }
         }
     }
-};
-
-#hamburger{
-   display: none;
 }
 
-label{
+;
+
+.hamburger-menu {
     display: none;
-    
-    &::before{
+
+    @include respond-to('small') {
+        display: block;
+    }
+}
+
+#opt-in {
+    display: none;
+}
+
+label {
+    display: none;
+
+    &::before {
         content: "\2630";
         font-weight: 500;
         font-size: 6rem;
-        
+
     }
-    
-    @include respond-to('small'){
+
+    @include respond-to('small') {
         display: block;
+        position: absolute;
+        right: 50px;
+        top: 12px;
         padding-bottom: 1rem;
+
     }
 }
 
+
+
+input:checked ~.site-wraper .site-head .site-nav{
+    display: block;
+}
