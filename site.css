@@ -17,7 +17,7 @@ body {
   background-color: #091334;
 }
 
-a {
+a, i {
   font-weight: bold;
   text-decoration: none;
   color: inherit;
@@ -122,5 +122,22 @@ a {
   border-color: #ffc107;
 }
 .site-wraper footer {
-  background-color: red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid white;
+}
+.site-wraper footer ul {
+  text-align: center;
+}
+.site-wraper footer ul li {
+  display: inline-block;
+  margin: 2rem 0.5rem;
+}
+.site-wraper footer ul li a:is(:hover, :focus) {
+  color: #ffc107;
+}
+.site-wraper footer ul li a i {
+  font-size: 3rem;
 }/*# sourceMappingURL=site.css.map */

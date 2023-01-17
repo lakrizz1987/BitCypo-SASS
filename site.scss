@@ -18,16 +18,16 @@ html {
 body {
     height: 100vh;
     background-color: $backgroundColor;
-
 }
 
-a {
+a,i {
     font-weight: bold;
     text-decoration: none;
     color: inherit;
     transition: color 0.8s ease-out;
-
 }
+
+
 
 .site-wraper {
     width: 100%;
@@ -149,8 +149,31 @@ a {
     }
 
     footer {
-        background-color: red;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $primaryColor;
 
+        ul{
+            text-align: center;
+            
+            li{
+               
+                display: inline-block;
+                margin: 2rem 0.5rem;
+
+                a{
+                    &:is(:hover,:focus){
+                        color: $yellowColor;
+                    }
+
+                    i{
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
     }
 }
 
