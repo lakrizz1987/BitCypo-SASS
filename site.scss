@@ -57,14 +57,21 @@ i {
 
         h1 {
             font-size: 4.0rem;
+
+            @include respond-to('small') {
+                
+                margin-left: 2rem;
+            }
         }
 
-       .site-nav{
-        @include respond-to('small') {
-            display: none;
-        }
+        .site-nav {
+            @include respond-to('small') {
+                position: absolute;
+                top: 90px;
+                left: -590px;
+            }
 
-       }
+        }
 
         li {
             list-style: none;
@@ -219,17 +226,9 @@ i {
     }
 }
 
-;
 
-.hamburger-menu {
-    display: none;
 
-    @include respond-to('small') {
-        display: block;
-    }
-}
-
-#opt-in {
+#hamburger {
     display: none;
 }
 
@@ -246,7 +245,7 @@ label {
     @include respond-to('small') {
         display: block;
         position: absolute;
-        right: 50px;
+        right: 30px;
         top: 12px;
         padding-bottom: 1rem;
 
@@ -255,6 +254,37 @@ label {
 
 
 
-input:checked ~.site-wraper .site-head .site-nav{
+input:checked~.site-wraper .site-head .site-nav {
+    left: 0px;
+    font-size: 3.5rem;
+    height: 100%;
+    width: 70%;
+    background-color: $backgroundColor;
+    padding: 0.5em;
+    transition: left 0.4s ease-in;
+}
+
+input:checked~.site-wraper .site-head .site-nav ul li {
     display: block;
+}
+
+//if input is checked and user make screen biger navigation goes to normal
+@media screen and (min-width:1010px) {
+    
+    input:checked~.site-wraper .site-head .site-nav ul li{
+        display: inline-block;
+        font-size: inherit;
+        margin-top:0 ;
+        margin-bottom: 0;
+    }
+
+    input:checked~.site-wraper .site-head .site-nav ul{
+        display: flex;
+        justify-content: end;
+       
+    }
+
+    input:checked~.site-wraper .site-head .site-nav ul li a{
+        font-size: 25px;
+    }
 }

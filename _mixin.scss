@@ -1,5 +1,6 @@
 $breakpoints: (
   'small':  1010px,
+  'big': 500px
 ) !default;
 
 @mixin respond-to($breakpoint) {
