@@ -33,8 +33,6 @@ i {
     transition: color 0.8s ease-out;
 }
 
-
-
 .site-wraper {
     width: 100%;
     padding: 2.5rem 4rem 0 4rem;
@@ -47,30 +45,31 @@ i {
         padding: 2.5rem 2rem 2.5rem 2rem;
     }
 
-    .site-head {
-        font-size: 2.5rem;
-        width: 100%;
-        margin: 1rem 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+}
 
-        h1 {
-            font-size: 4.0rem;
 
-            @include respond-to('small') {
-                
-                margin-left: 2rem;
-            }
+.site-head {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .site-head-title {
+        font-size: 4.0rem;
+
+        @include respond-to('small') {
+
+            margin-left: 2rem;
         }
+    }
 
-        .site-nav {
-            @include respond-to('small') {
-                position: absolute;
-                top: 90px;
-                left: -590px;
-            }
-
+    .site-nav {
+        @include respond-to('small') {
+            position: absolute;
+            top: 90px;
+            left: -590px;
         }
 
         li {
@@ -85,40 +84,39 @@ i {
             }
 
         }
+
     }
 
-    .site-main {
-        margin: 8rem auto;
-        margin-bottom: 0;
-        width: 95%;
-        overflow: hidden;
 
+}
 
-        .home-main-grid {
-            min-height: 70vh;
-            display: grid;
-            gap: 2rem;
-            width: 100%;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            justify-items: stretch;
+.site-main {
+    margin: 8rem auto;
+    margin-bottom: 0;
+    width: 95%;
+    overflow: hidden;
+
+    .home-main-grid {
+        min-height: 70vh;
+        display: grid;
+        gap: 2rem;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: stretch;
+        align-items: center;
+
+        @include respond-to('small') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-
-            @include respond-to('small') {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                margin-bottom: 3rem;
-                gap: 5rem;
-            }
+            text-align: center;
+            margin-bottom: 3rem;
+            gap: 5rem;
         }
 
-
-
-
-        img {
+        .home-main-grid-img {
             width: 90%;
             align-self: baseline;
             grid-column-start: 1;
@@ -132,8 +130,7 @@ i {
             }
         }
 
-
-        h2 {
+        .home-main-grid-title {
             width: 100%;
             grid-column-start: 4;
             grid-column-end: 7;
@@ -146,7 +143,7 @@ i {
             align-self: flex-end;
         }
 
-        p {
+        .home-main-grid-text {
             width: 100%;
             grid-column-start: 4;
             grid-column-end: 7;
@@ -190,36 +187,34 @@ i {
                 }
             }
         }
+    }
+}
 
+.site-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $primaryColor;
+
+    @include respond-to('small') {
+        flex-direction: column-reverse;
     }
 
-    footer {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid $primaryColor;
+    .site-footer-icons {
+        text-align: center;
 
-        @include respond-to('small') {
-            flex-direction: column-reverse;
-        }
+        li {
+            display: inline-block;
+            margin: 2rem 0.5rem;
 
-        ul {
-            text-align: center;
+            a {
+                &:is(:hover) {
+                    color: $yellowColor;
+                }
 
-            li {
-
-                display: inline-block;
-                margin: 2rem 0.5rem;
-
-                a {
-                    &:is(:hover) {
-                        color: $yellowColor;
-                    }
-
-                    i {
-                        font-size: 3rem;
-                    }
+                i {
+                    font-size: 3rem;
                 }
             }
         }
@@ -227,12 +222,11 @@ i {
 }
 
 
-
 #hamburger {
     display: none;
 }
 
-label {
+.hamburger-menu-icon {
     display: none;
 
     &::before {
@@ -270,21 +264,21 @@ input:checked~.site-wraper .site-head .site-nav ul li {
 
 //if input is checked and user make screen biger navigation goes to normal
 @media screen and (min-width:1010px) {
-    
-    input:checked~.site-wraper .site-head .site-nav ul li{
+
+    input:checked~.site-wraper .site-head .site-nav ul li {
         display: inline-block;
         font-size: inherit;
-        margin-top:0 ;
+        margin-top: 0;
         margin-bottom: 0;
     }
 
-    input:checked~.site-wraper .site-head .site-nav ul{
+    input:checked~.site-wraper .site-head .site-nav ul {
         display: flex;
         justify-content: end;
-       
+
     }
 
-    input:checked~.site-wraper .site-head .site-nav ul li a{
+    input:checked~.site-wraper .site-head .site-nav ul li a {
         font-size: 25px;
     }
 }
