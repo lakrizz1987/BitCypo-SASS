@@ -224,6 +224,10 @@ i {
   }
 }
 
+input:checked ~ label::before {
+  content: "✖";
+}
+
 input:checked ~ .site-wraper .site-head .site-nav {
   left: 0px;
   font-size: 3.5rem;

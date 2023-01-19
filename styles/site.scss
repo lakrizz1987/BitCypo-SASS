@@ -246,7 +246,9 @@ i {
     }
 }
 
-
+input:checked ~ label::before{
+    content: "\2716";
+}
 
 input:checked~.site-wraper .site-head .site-nav {
     left: 0px;
